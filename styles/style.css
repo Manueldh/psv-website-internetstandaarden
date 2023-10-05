@@ -17,7 +17,7 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0px 150px 0px 150px;
+    padding: 0px 10% 0px 10%;
 }
 
 nav li{
@@ -108,11 +108,11 @@ h3{
 }
 
 section{
-    padding: 150px 300px 150px 300px;
+    padding: 5% 15% 5% 15%;
 }
 
 section p{
-    width: 40%;
+    width: 60%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -182,22 +182,225 @@ article img:first-of-type{
 }
 
 .img-header-prijzen{
-    background-image: url("/images/europacup1.jpeg");
+    background-image: url("../images/europacup1.jpeg");
     height: 95vh;
-    width: 100%;
     background-position: center;
     background-size: cover;
-    background-repeat: none;
-    color: white;
-    padding: 60vh 300px 300px 300px;
+    position: relative;
 }
 
 .img-header-prijzen h1{
     font-size: 6em;
     background-color: #141414;
-    padding: 30px;
+    padding: 0.5em;
     color: #ff252c;
-    display: inline;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.img-header-spelers{
+    background-image: url("../images/ronaldo-romario.jpeg");
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.img-header-spelers h1{
+    font-size: 6em;
+    background-color: #141414;
+    padding: 0.5em;
+    color: #ff252c;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;;
+}
+
+.container-speler{
+    display: flex;
+    margin-bottom: 12%;
+}
+.container-speler:last-child{
+    margin-bottom: 100px;
+}
+
+.container-speler .container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-speler img{
+    width: 50%;
+    object-fit: cover;
+}
+.container p{
+    width: 95%;
+}
+
+.container-speler .container h2{
+    background-color: white;
+    color: black;
+    padding: 0px 0px 10px 0px;
+}
+
+.container-speler .container h4{
+    margin-top: 20px;
+}
+
+.container-speler li{
+    list-style-type: none;
+}
+
+.grid-wrapper{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.speler-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.speler-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-header-historie{
+    background-image: url("../images/historie.webp");
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.img-header-historie h1{
+    font-size: 6em;
+    background-color: #141414;
+    padding: 0.5em;
+    color: #ff252c;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;;
+}
+
+article h2{
+    font-family: 'Montserrat';
+    font-size: 2em;
+    font-weight: 800;
+    background-color: white;
+    color: black;
+    display: block;
+    padding: 0;
+}
+
+.img-header-home{
+    background-image: url("../images/home-header.jpeg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); 
+}
+
+/* dit gebruikt voor de box shadow zodat er een donkere kleur over mijn achtergrond heen komt https://stackoverflow.com/questions/9182978/semi-transparent-color-layer-over-background-image */
+
+.img-header-home nav{
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+
+.img-header-home nav a{
+    text-decoration: none;
+    color: #ff252c; 
+    font-weight: 600;
+    font-size: 2em;
+    background-color: black;
+    padding: 1em;
+    transition: 250ms ease;
+}
+
+.img-header-home nav a:hover{
+    color: white;
+    background-color: #ff252c;
+}
+
+.img-header-home nav ul li{
+    transition: 250ms ease-in-out;
+}
+
+.img-header-home nav ul li:hover{
+    transform: scale(1.3);
+}
+
+
+.bronnen-pagina ol{
+    display: flex;
+    flex-direction: row;
+}
+.bronnen-pagina ol li{
+    width: 25%;
+    list-style-type: none;
+}
+.bronnen-pagina h3{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.bronnen-pagina ol li h4, .bronnen-pagina ol li ul li{
+    margin-bottom: 10px;
+}
+.bronnen-pagina ul li{
+    width: 100%;
+}
+.bronnen-pagina ul li:last-of-type{
+    margin-bottom: 30px;
+}
+.bronnen-pagina li a{
+    text-decoration: none;
+}
+.bronnen-pagina li a:hover{
+    color: #ff252c;
+}
+
+
+@media only screen and (max-width: 600px){
+
+    .img-header-spelers{
+        height: 50vh;
+    }
+
+    .img-header-spelers h1{
+     font-size: 3em;   
+     display: block;
+    }
+
+    .container-speler{
+        flex-direction: column;
+    }
+    .container-speler .container{
+        width:  100%;
+        padding-bottom: 20px;
+    }
+    .container-speler img{
+        width: 100%;
+    }
+    
+    .grid-wrapper{
+        grid-template-columns: auto;
+    }
+
 }
 
 
